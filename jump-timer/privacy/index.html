@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jump Timer — Privacy Policy</title>
+<style>
+:root { color-scheme: light dark; --page-background:#ffffff; --body-text:#1c1c1e; --muted-text:#52525b; --rule:#e4e4e7; --link:#0b6bcb; --panel-background:#f4f6f8; }
+@media (prefers-color-scheme: dark) { :root { --page-background:#111214; --body-text:#e8e8ea; --muted-text:#a1a1aa; --rule:#2a2c30; --link:#7cb7ff; --panel-background:#191b1e; } }
+* { box-sizing:border-box; }
+body { margin:0 auto; max-width:44rem; padding:2.5rem 1.25rem 4rem; background:var(--page-background); color:var(--body-text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; font-size:1.05rem; line-height:1.65; }
+h1 { font-size:1.9rem; line-height:1.2; margin:0 0 .35rem; }
+h2 { font-size:1.25rem; margin:2.25rem 0 .5rem; }
+h3 { font-size:1.05rem; margin:1.5rem 0 .4rem; }
+p, ul { margin:0 0 1rem; }
+ul { padding-left:1.25rem; }
+li { margin-bottom:.4rem; }
+a { color:var(--link); }
+.page-subtitle { color:var(--muted-text); margin-bottom:2rem; }
+.panel { background:var(--panel-background); border:1px solid var(--rule); border-radius:.75rem; padding:1.1rem 1.25rem .35rem; margin-bottom:2.5rem; }
+.panel h2 { margin-top:0; }
+footer { border-top:1px solid var(--rule); margin-top:3rem; padding-top:1rem; color:var(--muted-text); font-size:.95rem; }
+</style>
+</head>
+<body>
+<header id="privacy-header">
+  <h1 id="privacy-title">Jump Timer — Privacy Policy</h1>
+  <p id="privacy-subtitle" class="page-subtitle">Lucid Studios LLC &middot; Effective 25 July 2026</p>
+</header>
+
+<main id="privacy-main">
+
+  <section id="summary-section" class="panel">
+    <h2 id="summary-heading">The short version</h2>
+    <p id="summary-intro">Every line here is a plain-English restatement of a section below — nothing extra, nothing softened.</p>
+    <ul id="summary-list">
+      <li id="summary-local">Your workouts stay on your iPhone. There is no Jump Timer account, no iCloud sync, and no server of ours stores them. The one thing that ever leaves is feedback you choose to send.</li>
+      <li id="summary-no-tracking">No analytics, no advertising, no tracking, and no third-party SDKs of any kind. We never sell your data.</li>
+      <li id="summary-health">Apple Health, if you allow it: Jump Timer reads your weight, date of birth, and biological sex and never stores them. Numbers worked out from them — your calorie estimate and your age-seeded heart-rate zones — are stored on this device and, if you link Strava, sent to Strava. Jump Timer writes finished workouts back to Health.</li>
+      <li id="summary-bluetooth">A Bluetooth heart-rate strap is used for heart rate only. While you pick a strap the app reads the name it broadcasts, and the paired strap's identifier is saved on your iPhone so it reconnects. Neither leaves the device.</li>
+      <li id="summary-strava">Strava, only if you link it: Jump Timer sends up your workout — duration, calories, heart-rate trail, and the workout title you typed. No location or GPS. The permission it asks Strava for is <code id="summary-strava-scope">activity:read_all,activity:write</code> — Strava requires the read half for the follow-up call that sets your workout's type — but Jump Timer never reads anything from your Strava account. Your Strava data is never sold and never used for advertising.</li>
+      <li id="summary-unlink">Unlinking Strava inside Jump Timer does not revoke Jump Timer's access in Strava — you have to revoke it in Strava's own settings. Workouts already uploaded stay in your Strava account until you delete them there, including after you delete the app.</li>
+      <li id="summary-feedback">Feedback you send from the app becomes an issue in our private issue tracker on GitHub, so GitHub holds it. It carries whatever you typed, your app version and your iOS version, and the email address you chose to add — the email is optional and only used to reply.</li>
+      <li id="summary-ip">We never store your IP address. A one-way, salted hash of it is counted for a few minutes to stop abuse of the feedback endpoint, then deleted. The hash is not linked to your feedback and cannot be reversed to an address.</li>
+      <li id="summary-deletion">Deleting the app removes everything Jump Timer stored on the device, including its Strava link — but not the Strava authorization and not the activities already uploaded.</li>
+    </ul>
+  </section>
+
+  <section id="about-section">
+    <h2 id="about-heading">Who this is about</h2>
+    <p id="about-body">Jump Timer is an interval timer for jump-rope workouts, published for iPhone by Lucid Studios LLC. This policy covers the Jump Timer app and its two pages on this site — this policy and the support page. Questions go to <a id="about-email-link" href="mailto:developer@lucidstudios.io">developer@lucidstudios.io</a>.</p>
+    <p id="about-no-account">Jump Timer has no account and no sign-in. We do not know who you are.</p>
+  </section>
+
+  <section id="on-device-section">
+    <h2 id="on-device-heading">What Jump Timer keeps on your iPhone</h2>
+    <p id="on-device-intro">Everything the app records lives in its own storage on your iPhone — one local database plus the app's own files. There is no CloudKit or iCloud sync, no copy on a Jump Timer server, and no backup we can read. Rather than list every field, here is the whole picture by category:</p>
+    <ul id="on-device-list">
+      <li id="on-device-workouts">The workouts you build or start from a preset, and the finished sessions they produce — the workout's name, its times, rounds completed, calorie estimate, and the heart-rate trail recorded during the run.</li>
+      <li id="on-device-preferences">Your preferences: cues and voice settings, appearance, your manually entered weight, age, and biological sex, your heart-rate zone boundaries, and the toggles for reminders and Strava auto-upload.</li>
+      <li id="on-device-strap">The paired heart-rate strap's Bluetooth identifier, saved so the strap reconnects on its own.</li>
+      <li id="on-device-queue">Workouts waiting to go to Strava. Each queued item carries the workout name you typed and the full heart-rate series, and is deleted once it uploads.</li>
+      <li id="on-device-widget">A small snapshot file, shared with the home-screen widget so it can draw your current progress without opening the app. It holds this week's active time, your current streak, and the date of your last qualifying workout.</li>
+      <li id="on-device-strava-link">If you link Strava, the connection itself — the access and refresh tokens Strava issues — held in your iPhone's Keychain. This is the "stored connection" that unlinking clears, and the first launch after a reinstall clears any the Keychain kept from a previous install.</li>
+      <li id="on-device-voice">Cached spoken audio the app synthesises from your own workout and segment names, so voice cues play instantly instead of being re-rendered every run.</li>
+    </ul>
+    <p id="on-device-streaks">Your streak is not kept as its own record — it is worked out from your finished sessions each time it is shown. Its current value is copied into the widget snapshot above, so the widget can draw it while the app is closed.</p>
+  </section>
+
+  <section id="health-section">
+    <h2 id="health-heading">Apple Health</h2>
+    <p id="health-reads">If you grant permission, Jump Timer reads exactly three things from Apple Health: your body mass, your date of birth, and your biological sex. Those raw values are never stored by Jump Timer — they are read when needed and kept only in memory.</p>
+    <p id="health-derived">Numbers worked out from them are stored. Your calorie estimate for a finished workout (which prefers your Health values over anything you typed by hand) is saved with that session on this device, written back to Apple Health, and — if you have linked Strava — sent to Strava with the workout. Your age from Health also seeds your heart-rate zone boundaries, which are saved in the app's preferences on this device.</p>
+    <p id="health-writes">If you grant permission, Jump Timer writes exactly three things to Apple Health: the workout itself, the active energy burned, and your heart rate. Health data belongs to Apple Health, not to Jump Timer — you manage or delete it in the Health app, and you can withdraw either permission there at any time.</p>
+  </section>
+
+  <section id="bluetooth-section">
+    <h2 id="bluetooth-heading">Bluetooth heart-rate monitors</h2>
+    <p id="bluetooth-scope">Jump Timer connects to standard Bluetooth heart-rate straps and uses the heart-rate service only (Bluetooth service <code id="bluetooth-service-uuid">0x180D</code>, characteristic <code id="bluetooth-characteristic-uuid">0x2A37</code>). It reads your heart rate. While you are choosing a strap it also reads the name the strap broadcasts and its Bluetooth identifier, so you can recognise it in the list and it can reconnect later — nothing else about the strap, and nothing at all about you.</p>
+    <p id="bluetooth-identifier">The paired strap's identifier is saved on your iPhone so it can reconnect automatically. It never leaves the device.</p>
+  </section>
+
+  <section id="strava-section">
+    <h2 id="strava-heading">Strava (only if you link it)</h2>
+    <p id="strava-optional">Linking Strava is optional and off until you do it. Nothing is sent to Strava unless you link.</p>
+
+    <h3 id="strava-sends-heading">What Jump Timer sends to Strava</h3>
+    <p id="strava-sends-body">An upload contains your workout: start time, duration, calories, and the heart-rate trail recorded during the run. It also carries the workout title you typed — that is free text you control, so treat it as public to your Strava audience — and an identifier for the session, used so the same workout is never uploaded twice. No location or GPS data is sent, because Jump Timer never collects any.</p>
+
+    <h3 id="strava-reads-heading">What Jump Timer reads from Strava</h3>
+    <p id="strava-reads-body">Nothing. Jump Timer only writes workouts to your Strava account; it never reads your activities, your profile, or your friends. The permission Jump Timer requests during linking is literally <code id="strava-scope">activity:read_all,activity:write</code>, and we name that read half openly rather than hide it. It is there because Strava requires it, not because the app wants your data: after the upload, Jump Timer makes one more call to set the activity's type to a jump-rope workout, and Strava rejects that call with a 404 unless the same token may also read your activities. So the app must ask for read access — and still reads nothing. No code in Jump Timer fetches your activities, your profile, or your friends.</p>
+
+    <h3 id="strava-use-heading">How your Strava data is used</h3>
+    <p id="strava-use-body">Your Strava data is never sold, and it is never used for advertising. It is used solely to put your finished workout in your own Strava account.</p>
+
+    <h3 id="strava-unlink-heading">Unlinking is not the same as revoking</h3>
+    <p id="strava-unlink-body">Unlinking Strava inside Jump Timer clears the stored connection on your iPhone and cancels anything still waiting to upload. It does not revoke Jump Timer's authorization in your Strava account — that authorization stays live until you revoke it yourself, in Strava's own settings under "My Apps". Workouts already uploaded are yours and stay in your Strava account; delete them in Strava if you no longer want them there.</p>
+  </section>
+
+  <section id="feedback-section">
+    <h2 id="feedback-heading">Feedback you send from the app</h2>
+    <p id="feedback-fields">Settings &rsaquo; Send Feedback posts exactly six things: which app it is, whether it is a bug or a feature request, your description, an optional reply email address, the app version, and your iOS version. No advertising identifier, no device identifier, no device model, no language or region.</p>
+    <p id="feedback-destination">That post passes straight through our small relay service and becomes an issue in our <strong>private</strong> GitHub repository for Jump Timer. GitHub stores and holds the issue on our behalf — so your description and, if you gave one, your email address rest with GitHub. The relay keeps nothing itself.</p>
+    <p id="feedback-email-use">A reply email address is optional; leave it blank and we simply have no way to write back. When you do give one, we use it to reply about your report and nothing else.</p>
+    <p id="feedback-logs">The relay writes operational logs that are deleted after 14 days. Those logs contain no feedback content — not your description, not your email address — and automated tests enforce exactly that on every build. They carry no IP address either; nothing in the relay ever writes one to a log, though that rests on how the relay is built rather than on a test.</p>
+    <p id="feedback-ip">We never store your IP address. To stop abuse of the feedback endpoint, a one-way, salted hash of it is counted for a few minutes, then deleted. It is not linked to your feedback and cannot be reversed to an address.</p>
+  </section>
+
+  <section id="notifications-section">
+    <h2 id="notifications-heading">Notifications, widgets, and the Live Activity</h2>
+    <p id="notifications-body">The streak reminder is a local notification your iPhone schedules for itself, and the home-screen widgets read a snapshot file on the device. The Live Activity is different: it is drawn by the running app itself, which hands the current segment straight to iOS, so it never touches that file. None of this involves a push service, and none of it sends anything off your iPhone.</p>
+  </section>
+
+  <section id="never-section">
+    <h2 id="never-heading">What Jump Timer never does</h2>
+    <ul id="never-list">
+      <li id="never-sdks">It contains no third-party SDKs at all — no analytics, no advertising, no crash-reporting, no tracking libraries.</li>
+      <li id="never-tracking">It does not track you across other apps or websites, and it collects no advertising identifier.</li>
+      <li id="never-sell">It does not sell or rent your data to anyone.</li>
+      <li id="never-cloud">It does not sync your workouts to iCloud or to any server of ours.</li>
+      <li id="never-location">It does not collect location or GPS data.</li>
+    </ul>
+  </section>
+
+  <section id="deletion-section">
+    <h2 id="deletion-heading">Deleting your data</h2>
+    <p id="deletion-app">Deleting the app removes everything Jump Timer stored on the device: your workouts and sessions, your preferences, the paired strap's identifier, any queued uploads, the widget snapshot, and the cached voice audio all go with it. The Strava link goes too, with one detail worth stating plainly — iOS leaves Keychain items behind when an app is deleted, so Jump Timer clears its own stored Strava tokens on the first launch after any reinstall. A reinstalled Jump Timer is never already linked.</p>
+    <p id="deletion-strava">Two things deliberately survive, because they are not ours to delete. Jump Timer's authorization in your Strava account stays live until you revoke it in Strava's own settings under "My Apps". Activities already uploaded remain in your Strava account until you delete them in Strava.</p>
+    <p id="deletion-health">Workouts Jump Timer wrote to Apple Health belong to Health, not to Jump Timer — manage or delete them in the Health app.</p>
+    <p id="deletion-feedback">Feedback you already sent lives in our private GitHub issue tracker. Ask us at <a id="deletion-email-link" href="mailto:developer@lucidstudios.io">developer@lucidstudios.io</a> and we will delete the issue, including any reply address you gave.</p>
+  </section>
+
+  <section id="changes-section">
+    <h2 id="changes-heading">Changes to this policy</h2>
+    <p id="changes-body">If the app's data practices change, this page changes with them and the effective date at the top moves. The current version is always the one you are reading.</p>
+  </section>
+
+  <section id="contact-section">
+    <h2 id="contact-heading">Contact</h2>
+    <p id="contact-body">Lucid Studios LLC &mdash; <a id="contact-email-link" href="mailto:developer@lucidstudios.io">developer@lucidstudios.io</a></p>
+  </section>
+
+</main>
+
+<footer id="privacy-footer">
+  <p id="privacy-footer-links"><a id="privacy-footer-support-link" href="/jump-timer/support/">Support</a> &middot; <a id="privacy-footer-home-link" href="/">Lucid Studios</a></p>
+</footer>
+</body>
+</html>
