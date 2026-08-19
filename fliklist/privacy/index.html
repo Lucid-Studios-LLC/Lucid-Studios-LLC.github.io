@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fliklist — Privacy Policy</title>
+<style>
+:root { color-scheme: light dark; --page-background:#ffffff; --body-text:#1c1c1e; --muted-text:#52525b; --rule:#e4e4e7; --link:#0b6bcb; --panel-background:#f4f6f8; }
+@media (prefers-color-scheme: dark) { :root { --page-background:#111214; --body-text:#e8e8ea; --muted-text:#a1a1aa; --rule:#2a2c30; --link:#7cb7ff; --panel-background:#191b1e; } }
+* { box-sizing:border-box; }
+body { margin:0 auto; max-width:44rem; padding:2.5rem 1.25rem 4rem; background:var(--page-background); color:var(--body-text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; font-size:1.05rem; line-height:1.65; }
+h1 { font-size:1.9rem; line-height:1.2; margin:0 0 .35rem; }
+h2 { font-size:1.25rem; margin:2.25rem 0 .5rem; }
+h3 { font-size:1.05rem; margin:1.5rem 0 .4rem; }
+p, ul { margin:0 0 1rem; }
+ul { padding-left:1.25rem; }
+li { margin-bottom:.4rem; }
+a { color:var(--link); }
+.page-subtitle { color:var(--muted-text); margin-bottom:2rem; }
+.panel { background:var(--panel-background); border:1px solid var(--rule); border-radius:.75rem; padding:1.1rem 1.25rem .35rem; margin-bottom:2.5rem; }
+.panel h2 { margin-top:0; }
+footer { border-top:1px solid var(--rule); margin-top:3rem; padding-top:1rem; color:var(--muted-text); font-size:.95rem; }
+</style>
+</head>
+<body>
+<header id="privacy-header">
+  <h1 id="privacy-title">fliklist — Privacy Policy</h1>
+  <p id="privacy-subtitle" class="page-subtitle">Lucid Studios LLC &middot; Effective 19 August 2026</p>
+</header>
+
+<main id="privacy-main">
+
+  <section id="summary-section" class="panel">
+    <h2 id="summary-heading">The short version</h2>
+    <p id="summary-intro">Every line here is a plain-English restatement of a section below — nothing extra, nothing softened.</p>
+    <ul id="summary-list">
+      <li id="summary-account">fliklist has an account, because two people have to be connected for it to work at all. The account is an email address, a password we only ever store scrambled, and a display name.</li>
+      <li id="summary-activity">What you do in fliklist is stored on our server: which films and shows you said yes or no to, what you marked as watched, what you added outright, what you matched on, and when you last used the app.</li>
+      <li id="summary-partner">Your partner sees your display name and everything the two of you share — matches, watch history, and the activity feed for your pairing. They never see your email address or your individual noes.</li>
+      <li id="summary-invites">If you invite someone, we store the email address you typed and send them one message with a link that expires after seven days.</li>
+      <li id="summary-notifications">Notifications are optional. Turning them on stores a delivery address for this device or browser — nothing else.</li>
+      <li id="summary-device">On your phone, the app keeps only your session token, in the iPhone Keychain or the Android Keystore. On the website that same session is one cookie. A little more sits in local storage: your deck filters and a few "have you been asked this yet" flags.</li>
+      <li id="summary-feedback">Feedback you send from Settings becomes an issue in our private GitHub repository. It carries what you typed, your app and OS version, and <strong id="summary-feedback-email">your account email address</strong> — feedback from fliklist is never anonymous, because we want to be able to write back.</li>
+      <li id="summary-no-tracking">No analytics, no crash-reporting SDK, no advertising SDK, no tracking across other apps or websites, and no location. We never sell your data.</li>
+      <li id="summary-deletion">Settings &rsaquo; Delete account deletes everything, immediately and permanently. Your partner keeps their own swipes and simply sees you as unpaired.</li>
+      <li id="summary-adults">fliklist is for adults — 18 and over only.</li>
+    </ul>
+  </section>
+
+  <section id="about-section">
+    <h2 id="about-heading">Who this is about</h2>
+    <p id="about-body">fliklist is how two people decide what to watch: you each swipe through the same films and shows, and fliklist tells you what you both said yes to. It is published by Lucid Studios LLC. Questions go to <a id="about-email-link" href="mailto:developer@lucidstudios.io">developer@lucidstudios.io</a>.</p>
+    <p id="about-surfaces">This one policy covers <strong id="about-surfaces-emphasis">all three ways you can use fliklist</strong> — the iPhone app, the Android app, and the website at <span id="about-website">flicker.joeyshub.com</span>. They are the same product talking to the same server and the same database, so splitting this into separate policies would only mean two pages saying the same thing and drifting apart. Where the app and the website genuinely differ, this policy says so on the spot rather than hiding it.</p>
+    <p id="about-adults">fliklist is rated for adults and is not directed at children. We do not knowingly collect anything from anyone under 18.</p>
+  </section>
+
+  <section id="account-section">
+    <h2 id="account-heading">Your account</h2>
+    <p id="account-intro">Unlike a timer or a notepad, fliklist cannot work without an account — the whole point is that your swipes meet someone else's. Creating one stores:</p>
+    <ul id="account-list">
+      <li id="account-email">Your <strong>email address</strong>. It is how you sign in, and it is the only way we can reach you.</li>
+      <li id="account-password">Your <strong>password</strong>, stored only as a one-way Argon2 hash. We cannot read it, and nobody here has ever seen it.</li>
+      <li id="account-display-name">A <strong>display name</strong> — the label your partner sees. It starts as the part of your email before the @, and you can change it in Settings to anything you like. If you would rather your partner not see your email address, change it.</li>
+      <li id="account-activity">Two timestamps and a counter: when you last used fliklist at all, when you last read your home feed, and how many swipes you have made. They drive "what's new since you were here" and nothing else.</li>
+    </ul>
+    <p id="account-password-reset">There is no self-service password reset yet. If you are locked out, write to <a id="account-email-link" href="mailto:developer@lucidstudios.io">developer@lucidstudios.io</a>.</p>
+  </section>
+
+  <section id="activity-section">
+    <h2 id="activity-heading">What you do in fliklist</h2>
+    <p id="activity-intro">This is the part that lives on our server, because it has to be compared against another person's. Everything here is tied to your account:</p>
+    <ul id="activity-list">
+      <li id="activity-swipes">Every <strong>swipe</strong> — the title and whether you said yes or no, with the time you did it.</li>
+      <li id="activity-services">Which <strong>streaming services</strong> you told us you subscribe to, so the deck shows things you can actually watch.</li>
+      <li id="activity-pairings">Your <strong>pairings</strong>: who you are connected to, and whether the connection is pending or active.</li>
+      <li id="activity-matches">Your <strong>matches</strong> — the titles you and a partner both said yes to — and the time each one happened.</li>
+      <li id="activity-adds">Titles you <strong>added outright</strong> to a shared list without swiping for them.</li>
+      <li id="activity-watched">What you <strong>marked as watched</strong>, which list it came from, and who marked it.</li>
+      <li id="activity-picks">The <strong>daily pick</strong> fliklist suggested you, and whether you watched it, skipped it, or left it.</li>
+      <li id="activity-feed">The <strong>activity feed</strong> for each pairing — a short record of what happened between the two of you, so neither of you has to be online at the same time.</li>
+    </ul>
+    <p id="activity-catalogue">The films and shows themselves are not about you. fliklist keeps its own catalogue — names, posters, blurbs, scores, cast, and which services carry what — refreshed from Watchmode. That catalogue is the same for everybody.</p>
+  </section>
+
+  <section id="partner-section">
+    <h2 id="partner-heading">What your partner sees</h2>
+    <p id="partner-sees">Your <strong>display name</strong>, and everything the two of you share: what you matched on, what either of you added or marked watched, and the activity feed for your pairing. That is what a shared list is.</p>
+    <p id="partner-never">Your partner never sees your <strong>email address</strong>, your <strong>password</strong>, your swipes on titles they have not also said yes to, or anything from a different pairing. You can hold more than one pairing at a time, and they are entirely separate from each other.</p>
+    <p id="partner-unpair">Either of you can unpair at any time, from the partners screen.</p>
+  </section>
+
+  <section id="invites-section">
+    <h2 id="invites-heading">Inviting somebody</h2>
+    <p id="invites-body">To invite a partner you type their email address. We store that address so the invitation can be tracked and resent, and we send exactly one message to it — through <strong>Resend</strong>, our email provider — saying who invited them and carrying a link. The link expires after seven days and can be used once.</p>
+    <p id="invites-no-contacts">fliklist never reads your contacts. There is no address book access on either phone: the only email address involved is the one you type.</p>
+    <p id="invites-cancel">You can cancel a pending invitation from inside the app, which deletes it.</p>
+  </section>
+
+  <section id="notifications-section">
+    <h2 id="notifications-heading">Notifications</h2>
+    <p id="notifications-optional">Notifications are optional, off until you turn them on, and can be turned off again — in fliklist's Settings, or in your phone's or browser's own settings.</p>
+    <p id="notifications-app">In the <strong>app</strong>, turning them on stores a Firebase Cloud Messaging device token and which platform it came from — iPhone or Android. The token is a delivery address for this one device. Google delivers the message for us (and Apple's push service carries it the last leg on an iPhone); a notification says who did what, for example that a partner matched with you.</p>
+    <p id="notifications-web">On the <strong>website</strong>, turning them on stores a Web Push subscription: the endpoint URL your browser issues and the two keys that let us encrypt a message to it. Your browser's push service delivers it.</p>
+    <p id="notifications-analytics">Our Firebase project exists only to route notifications. <strong>Google Analytics is switched off in it</strong>, and fliklist contains no analytics SDK of any kind.</p>
+  </section>
+
+  <section id="on-device-section">
+    <h2 id="on-device-heading">What sits on your device</h2>
+    <p id="on-device-intro">Not much, and this is the one place the app and the website genuinely differ. Both keep a signed-in session; they just keep it in different places.</p>
+    <ul id="on-device-list">
+      <li id="on-device-app-token"><strong>In the app:</strong> your session token, held in the iPhone's Keychain or Android's Keystore-backed storage. On iPhone it is deliberately marked device-only and excluded from iCloud Keychain sync, so a token can never ride a backup onto another phone.</li>
+      <li id="on-device-web-cookie"><strong>On the website:</strong> one cookie named <code id="on-device-cookie-name">flicker_session</code>, holding the same kind of session token. It is HttpOnly (JavaScript cannot read it), SameSite=Lax, sent only over HTTPS, and lasts 90 days from your last visit. It is the only cookie fliklist sets. There is no advertising cookie and no third-party cookie.</li>
+      <li id="on-device-local"><strong>On both:</strong> a few small values in local storage — your deck filters and sort order, whether you have already been asked about notifications, whether you switched app notifications off, and whether you have seen the first-run tour. They stay on the device and are never sent anywhere.</li>
+    </ul>
+    <p id="on-device-clearing">Signing out clears the session on that device. On the website, clearing your browser's site data clears the rest.</p>
+  </section>
+
+  <section id="feedback-section">
+    <h2 id="feedback-heading">Feedback you send from the app</h2>
+    <p id="feedback-fields">Settings &rsaquo; Send feedback sends exactly five things: whether it is a bug or an idea, what you typed, your fliklist version, your OS version, and <strong id="feedback-email-emphasis">the email address on your account</strong>.</p>
+    <p id="feedback-email-why">There is no email box on the form, and nothing to leave blank: <strong>feedback from fliklist is never anonymous.</strong> You are already signed in, so our server attaches your account's own address rather than asking you to type one. That is a deliberate choice — a bug report we cannot ask a follow-up question about is usually a bug we cannot fix — and the form says so before you send.</p>
+    <p id="feedback-destination">Your report passes through our server, then through a small relay service we run, and becomes an issue in our <strong>private</strong> GitHub repository for fliklist. GitHub stores and holds that issue on our behalf, so your description and your email address rest with GitHub. The relay keeps nothing itself.</p>
+    <p id="feedback-ip">Your device never contacts the relay directly, so your IP address is never seen by it. The relay counts a short-lived, one-way salted hash of whoever called it to stop abuse — which, for fliklist, is our own server rather than you.</p>
+    <p id="feedback-content">Please don't put anything in a report you would rather keep private. Type what happened, not your passwords.</p>
+  </section>
+
+  <section id="processors-section">
+    <h2 id="processors-heading">Who else touches your data</h2>
+    <p id="processors-intro">A handful of companies, each doing one job for us. None of them is allowed to use your data for their own purposes, and none of them pays us for it:</p>
+    <ul id="processors-list">
+      <li id="processors-aws"><strong>Amazon Web Services</strong> (US East, Northern Virginia) — the server and the database fliklist runs on. Everything in the two sections above lives here.</li>
+      <li id="processors-resend"><strong>Resend</strong> — sends our two emails, and only those two: a partner invitation, and the confirmation that an account has been deleted. There is no newsletter and no marketing mail.</li>
+      <li id="processors-google"><strong>Google (Firebase Cloud Messaging)</strong> and, on iPhone, <strong>Apple (APNs)</strong> — deliver notifications to the app, if you turned them on. Analytics is off.</li>
+      <li id="processors-github"><strong>GitHub</strong> — holds feedback you send, as an issue in a private repository.</li>
+      <li id="processors-watchmode"><strong>Watchmode</strong> — the source of the film and show catalogue. This one is worth stating plainly: <strong id="processors-watchmode-emphasis">we ask Watchmode about films, never about you.</strong> No swipe, no account, and no identifier of yours is ever sent to them.</li>
+    </ul>
+    <p id="processors-legal">Beyond these, we would only hand anything over if the law actually required it of us.</p>
+  </section>
+
+  <section id="never-section">
+    <h2 id="never-heading">What fliklist never does</h2>
+    <ul id="never-list">
+      <li id="never-analytics">No analytics. There is no analytics SDK in the app or on the website, and no event stream anywhere.</li>
+      <li id="never-crash">No crash-reporting SDK.</li>
+      <li id="never-ads">No advertising SDK and no ad network. The occasional full-screen card between swipes is one of three picture files shipped inside fliklist itself — it loads nothing, reports nothing, and knows nothing about you.</li>
+      <li id="never-tracking">No tracking across other apps or websites, and no advertising identifier.</li>
+      <li id="never-sell">We do not sell or rent your data to anyone.</li>
+      <li id="never-location">No location, no GPS, no contacts, no camera, no microphone, no photo library.</li>
+      <li id="never-content">fliklist does not play films or shows, so it knows nothing about what you actually watched — only what you told it you watched.</li>
+    </ul>
+  </section>
+
+  <section id="deletion-section">
+    <h2 id="deletion-heading">Deleting your account</h2>
+    <p id="deletion-how">Open fliklist, go to <strong>Settings &rsaquo; Delete account</strong>, and confirm. It happens immediately and it is permanent — there is no waiting period, no recovery window, and nothing kept behind as a ghost.</p>
+    <p id="deletion-what">Everything in the sections above goes: your account and display name, your password hash, every swipe, every pairing you were in, your matches, your watch history, the titles you added, your daily picks, the activity feed for those pairings, your invitations, and any notification address for your devices.</p>
+    <p id="deletion-partner">Your partner keeps their own swipes and their own account, and simply sees themselves as unpaired. They are not told that you deleted your account, because that is not theirs to know.</p>
+    <p id="deletion-email">We send one last email to the address on the account, saying it has been deleted — so that if it was not you who did it, you find out.</p>
+    <p id="deletion-feedback">Two things deliberately survive, because they are no longer ours to delete on your behalf: feedback you already sent, which lives as an issue in our private GitHub repository, and emails already delivered to somebody's inbox. Ask us at <a id="deletion-email-link" href="mailto:developer@lucidstudios.io">developer@lucidstudios.io</a> and we will delete the issue, including your address on it.</p>
+    <p id="deletion-request">If you would rather not use the in-app button, or you want a copy of what we hold about you first, write to the same address and we will take care of it.</p>
+  </section>
+
+  <section id="changes-section">
+    <h2 id="changes-heading">Changes to this policy</h2>
+    <p id="changes-body">If fliklist's data practices change, this page changes with them and the effective date at the top moves. The current version is always the one you are reading.</p>
+  </section>
+
+  <section id="contact-section">
+    <h2 id="contact-heading">Contact</h2>
+    <p id="contact-body">Lucid Studios LLC &mdash; <a id="contact-email-link" href="mailto:developer@lucidstudios.io">developer@lucidstudios.io</a></p>
+  </section>
+
+</main>
+
+<footer id="privacy-footer">
+  <p id="privacy-footer-links"><a id="privacy-footer-support-link" href="/fliklist/support/">Support</a> &middot; <a id="privacy-footer-home-link" href="/">Lucid Studios</a></p>
+</footer>
+</body>
+</html>
