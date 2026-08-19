@@ -36,13 +36,14 @@ footer { border-top:1px solid var(--rule); margin-top:3rem; padding-top:1rem; co
     <ul id="summary-list">
       <li id="summary-account">fliklist has an account, because two people have to be connected for it to work at all. The account is an email address, a password we only ever store scrambled, and a display name.</li>
       <li id="summary-activity">What you do in fliklist is stored on our server: which films and shows you said yes or no to, what you marked as watched, what you added outright, what you matched on, and when you last used the app.</li>
-      <li id="summary-partner">Your partner sees your display name and everything the two of you share — matches, watch history, and the activity feed for your pairing. They never see your email address or your individual noes.</li>
+      <li id="summary-partner">Your partner sees your display name and everything the two of you share — matches, watch history, and the activity feed for your pairing. They never see your email address or your individual noes — only a daily count of how many titles you got through.</li>
       <li id="summary-invites">If you invite someone, we store the email address you typed and send them one message with a link that expires after seven days.</li>
       <li id="summary-notifications">Notifications are optional. Turning them on stores a delivery address for this device or browser — nothing else.</li>
       <li id="summary-device">On your phone, the app keeps only your session token, in the iPhone Keychain or the Android Keystore. On the website that same session is one cookie. A little more sits in local storage: your deck filters and a few "have you been asked this yet" flags.</li>
       <li id="summary-feedback">Feedback you send from Settings becomes an issue in our private GitHub repository. It carries what you typed, your app and OS version, and <strong id="summary-feedback-email">your account email address</strong> — feedback from fliklist is never anonymous, because we want to be able to write back.</li>
-      <li id="summary-no-tracking">No analytics, no crash-reporting SDK, no advertising SDK, no tracking across other apps or websites, and no location. We never sell your data.</li>
-      <li id="summary-deletion">Settings &rsaquo; Delete account deletes everything, immediately and permanently. Your partner keeps their own swipes and simply sees you as unpaired.</li>
+      <li id="summary-no-tracking">No analytics, no crash-reporting SDK, no advertising SDK, no advertising identifier, and no location. We never sell your data. Two things do load from another company as you use fliklist — poster pictures, from Watchmode's image host, and a trailer, from YouTube if you tap play — and both are named below.</li>
+      <li id="summary-retention">Nothing expires on a timer — what you have in fliklist stays while your account does, and there is no backup copy of the database sitting behind it.</li>
+      <li id="summary-deletion">Settings &rsaquo; Delete account deletes everything, immediately and permanently, bar three things named below that are not ours to delete: feedback you already sent, emails already delivered, and an invitation somebody else sent to your address. Your partner keeps their own swipes and simply sees you as unpaired.</li>
       <li id="summary-adults">fliklist is for adults — 18 and over only.</li>
     </ul>
   </section>
@@ -79,12 +80,14 @@ footer { border-top:1px solid var(--rule); margin-top:3rem; padding-top:1rem; co
       <li id="activity-picks">The <strong>daily pick</strong> fliklist suggested you, and whether you watched it, skipped it, or left it.</li>
       <li id="activity-feed">The <strong>activity feed</strong> for each pairing — a short record of what happened between the two of you, so neither of you has to be online at the same time.</li>
     </ul>
+    <p id="activity-trailers">Trailers are the one thing fliklist plays that it does not hold itself. Tapping play opens an embedded <strong>YouTube</strong> player — Google's privacy-enhanced <code id="activity-trailers-host">youtube-nocookie.com</code> one — which means your device connects straight to Google for that video. What they can see is the ordinary shape of a video request: your IP address, your browser or app's identification line, and which trailer you asked for. Nothing about your account, your swipes or your partner goes with it, and nothing happens at all until you tap play.</p>
     <p id="activity-catalogue">The films and shows themselves are not about you. fliklist keeps its own catalogue — names, posters, blurbs, scores, cast, and which services carry what — refreshed from Watchmode. That catalogue is the same for everybody.</p>
   </section>
 
   <section id="partner-section">
     <h2 id="partner-heading">What your partner sees</h2>
     <p id="partner-sees">Your <strong>display name</strong>, and everything the two of you share: what you matched on, what either of you added or marked watched, and the activity feed for your pairing. That is what a shared list is.</p>
+    <p id="partner-count">Your partner also sees, in the home feed, <strong>how many titles you swiped through on each day you used the deck</strong> and when the last of those was — a number and a time, never which titles and never which way you swiped. It is what tells them you have been keeping up, so neither of you is waiting on the other without knowing it.</p>
     <p id="partner-never">Your partner never sees your <strong>email address</strong>, your <strong>password</strong>, your swipes on titles they have not also said yes to, or anything from a different pairing. You can hold more than one pairing at a time, and they are entirely separate from each other.</p>
     <p id="partner-unpair">Either of you can unpair at any time, from the partners screen.</p>
   </section>
@@ -93,7 +96,7 @@ footer { border-top:1px solid var(--rule); margin-top:3rem; padding-top:1rem; co
     <h2 id="invites-heading">Inviting somebody</h2>
     <p id="invites-body">To invite a partner you type their email address. We store that address so the invitation can be tracked and resent, and we send exactly one message to it — through <strong>Resend</strong>, our email provider — saying who invited them and carrying a link. The link expires after seven days and can be used once.</p>
     <p id="invites-no-contacts">fliklist never reads your contacts. There is no address book access on either phone: the only email address involved is the one you type.</p>
-    <p id="invites-cancel">You can cancel a pending invitation from inside the app, which deletes it.</p>
+    <p id="invites-cancel">You can cancel a pending invitation from inside the app. That kills the link immediately — it stops working there and then. The <strong>record</strong> of the invitation is not thrown away, though: it is what tells whoever you invited that the link was cancelled rather than simply broken, and it still holds the address you typed. It stays until you delete your account.</p>
   </section>
 
   <section id="notifications-section">
@@ -110,7 +113,8 @@ footer { border-top:1px solid var(--rule); margin-top:3rem; padding-top:1rem; co
     <ul id="on-device-list">
       <li id="on-device-app-token"><strong>In the app:</strong> your session token, held in the iPhone's Keychain or Android's Keystore-backed storage. On iPhone it is deliberately marked device-only and excluded from iCloud Keychain sync, so a token can never ride a backup onto another phone.</li>
       <li id="on-device-web-cookie"><strong>On the website:</strong> one cookie named <code id="on-device-cookie-name">flicker_session</code>, holding the same kind of session token. It is HttpOnly (JavaScript cannot read it), SameSite=Lax, sent only over HTTPS, and lasts 90 days from your last visit. It is the only cookie fliklist sets. There is no advertising cookie and no third-party cookie.</li>
-      <li id="on-device-local"><strong>On both:</strong> a few small values in local storage — your deck filters and sort order, whether you have already been asked about notifications, whether you switched app notifications off, and whether you have seen the first-run tour. They stay on the device and are never sent anywhere.</li>
+      <li id="on-device-local"><strong>On both:</strong> a few small values in local storage — your deck filters and sort order, whether you have already been asked about notifications, whether you switched app notifications off, and whether you have seen the first-run tour. <strong>One of them does leave the device:</strong> your deck filters and sort order ride along with every request for a new deck, because the narrowing and the ordering happen on the server. The rest never go anywhere.</li>
+      <li id="on-device-session"><strong>On both, until the tab or the app is closed:</strong> which partner you last had selected, so a reload keeps you on the same shared list. It is a single id in session storage and it goes when you close.</li>
     </ul>
     <p id="on-device-clearing">Signing out clears the session on that device. On the website, clearing your browser's site data clears the rest.</p>
   </section>
@@ -131,8 +135,9 @@ footer { border-top:1px solid var(--rule); margin-top:3rem; padding-top:1rem; co
       <li id="processors-aws"><strong>Amazon Web Services</strong> (US East, Northern Virginia) — the server and the database fliklist runs on. Everything in the two sections above lives here.</li>
       <li id="processors-resend"><strong>Resend</strong> — sends our two emails, and only those two: a partner invitation, and the confirmation that an account has been deleted. There is no newsletter and no marketing mail.</li>
       <li id="processors-google"><strong>Google (Firebase Cloud Messaging)</strong> and, on iPhone, <strong>Apple (APNs)</strong> — deliver notifications to the app, if you turned them on. Analytics is off.</li>
+      <li id="processors-youtube"><strong>YouTube (Google)</strong> — plays a trailer, and only when you tap one, through the <code id="processors-youtube-host">youtube-nocookie.com</code> player. That connection is made by your device, not by our server, so Google sees your IP address, your browser or app's identification line, and the video id.</li>
       <li id="processors-github"><strong>GitHub</strong> — holds feedback you send, as an issue in a private repository.</li>
-      <li id="processors-watchmode"><strong>Watchmode</strong> — the source of the film and show catalogue. This one is worth stating plainly: <strong id="processors-watchmode-emphasis">we ask Watchmode about films, never about you.</strong> No swipe, no account, and no identifier of yours is ever sent to them.</li>
+      <li id="processors-watchmode"><strong>Watchmode</strong> — the source of the film and show catalogue. This one is worth stating plainly: <strong id="processors-watchmode-emphasis">our server does the asking, about films and never about you.</strong> No swipe, no account, and no identifier of yours is ever sent to them. One thing does reach them from your side, though: <strong>poster pictures are not copied onto our server</strong>, they are loaded from Watchmode's own image host as a card is drawn — so that host sees your IP address and your browser or app's identification line, the same as any picture on any web page.</li>
     </ul>
     <p id="processors-legal">Beyond these, we would only hand anything over if the law actually required it of us.</p>
   </section>
@@ -140,14 +145,21 @@ footer { border-top:1px solid var(--rule); margin-top:3rem; padding-top:1rem; co
   <section id="never-section">
     <h2 id="never-heading">What fliklist never does</h2>
     <ul id="never-list">
-      <li id="never-analytics">No analytics. There is no analytics SDK in the app or on the website, and no event stream anywhere.</li>
+      <li id="never-analytics">No analytics. There is no analytics SDK in the app or on the website, and no analytics events are collected or sent anywhere.</li>
       <li id="never-crash">No crash-reporting SDK.</li>
       <li id="never-ads">No advertising SDK and no ad network. The occasional full-screen card between swipes is one of three picture files shipped inside fliklist itself — it loads nothing, reports nothing, and knows nothing about you.</li>
-      <li id="never-tracking">No tracking across other apps or websites, and no advertising identifier.</li>
+      <li id="never-tracking">No advertising identifier, and fliklist never follows you across other apps or websites. It embeds no third-party code that could: the single outside connection your device makes while using fliklist is the trailer player above, opened by you tapping play, plus the poster images explained under Watchmode above.</li>
       <li id="never-sell">We do not sell or rent your data to anyone.</li>
       <li id="never-location">No location, no GPS, no contacts, no camera, no microphone, no photo library.</li>
       <li id="never-content">fliklist does not play films or shows, so it knows nothing about what you actually watched — only what you told it you watched.</li>
     </ul>
+  </section>
+
+  <section id="retention-section">
+    <h2 id="retention-heading">How long we keep it</h2>
+    <p id="retention-body">For as long as your account exists, and no longer. Nothing in fliklist expires on a timer: your swipes, matches, watch history, added titles, daily picks and the activity feed for each pairing stay while the account does — a shared list that quietly forgot last month would not be a shared list, and "have we seen this?" is a question about years, not weeks.</p>
+    <p id="retention-clocks">Three things do carry a clock. An <strong>invitation link</strong> expires after seven days. The <strong>website session cookie</strong> lasts 90 days from your last visit. A <strong>notification token</strong> is dropped as soon as the delivery service tells us it is dead, or when you switch notifications off.</p>
+    <p id="retention-deletion">Deleting your account is what ends the rest, and it is not a scheduled job — it happens at the moment you confirm. There is <strong>no backup copy</strong> of our database for anything to linger in afterwards, and no archive we keep on the side.</p>
   </section>
 
   <section id="deletion-section">
@@ -156,7 +168,13 @@ footer { border-top:1px solid var(--rule); margin-top:3rem; padding-top:1rem; co
     <p id="deletion-what">Everything in the sections above goes: your account and display name, your password hash, every swipe, every pairing you were in, your matches, your watch history, the titles you added, your daily picks, the activity feed for those pairings, your invitations, and any notification address for your devices.</p>
     <p id="deletion-partner">Your partner keeps their own swipes and their own account, and simply sees themselves as unpaired. They are not told that you deleted your account, because that is not theirs to know.</p>
     <p id="deletion-email">We send one last email to the address on the account, saying it has been deleted — so that if it was not you who did it, you find out.</p>
-    <p id="deletion-feedback">Two things deliberately survive, because they are no longer ours to delete on your behalf: feedback you already sent, which lives as an issue in our private GitHub repository, and emails already delivered to somebody's inbox. Ask us at <a id="deletion-email-link" href="mailto:developer@lucidstudios.io">developer@lucidstudios.io</a> and we will delete the issue, including your address on it.</p>
+    <p id="deletion-feedback">Three things deliberately survive, because they are not ours to delete on your behalf:</p>
+    <ul id="deletion-survivors-list">
+      <li id="deletion-survivor-feedback"><strong>Feedback you already sent</strong>, which lives as an issue in our private GitHub repository, with your address on it.</li>
+      <li id="deletion-survivor-email"><strong>Emails already delivered</strong> to somebody's inbox. We cannot reach into a mailbox that is not ours.</li>
+      <li id="deletion-survivor-invite"><strong>An invitation somebody else sent to your address.</strong> That record belongs to the person who sent it, not to you, and it still holds the address they typed. Your own invitations — the ones you sent — go with your account.</li>
+    </ul>
+    <p id="deletion-survivors-ask">Ask us at <a id="deletion-email-link" href="mailto:developer@lucidstudios.io">developer@lucidstudios.io</a> and we will delete the issue, including your address on it, and any invitation still holding your address.</p>
     <p id="deletion-request">If you would rather not use the in-app button, or you want a copy of what we hold about you first, write to the same address and we will take care of it.</p>
   </section>
 
